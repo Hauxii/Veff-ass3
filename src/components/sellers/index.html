@@ -1,1 +1,8 @@
 <div> Hér ætti að birtast listi af seljendum - TODO: útfæra það!</div>
+<ul>
+	<li ng-repeat="seller in sellers">{{seller.name}}
+		<ul>
+			<li>{{seller.category}}</li>
+		</ul>
+	</li>
+</ul>
