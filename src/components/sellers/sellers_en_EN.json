@@ -3,6 +3,9 @@
 		"Title":                     "Sellers List",
 		"Name":                      "Name",
 		"Category":                  "Category",
+		"Add":                       "Add seller",
+		"Ok":                          "OK",
+		"Cancel":                      "Cancel",
 		"Messages" : {
 			"LoadFailed":            "Failed to load the list of sellers",
 			"SaveSucceeded":         "The seller has been added successfully",

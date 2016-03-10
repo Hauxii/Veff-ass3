@@ -1,11 +1,9 @@
+<div ng-include="'src/components/nav-bar/nav-bar.html'"></div>
 <div ng-show="isLoading">
 	<loading-message></loading-message>
 </div>
 
 <div ng-hide="isLoading">
-	<button class="btn btn-primary" ng-click="onAddSeller()">
-		<span translate="sellers.Add" />
-	</button>
 	<table>
 		<thead>
 			<tr>
@@ -20,4 +18,7 @@
 			</tr>
 		</tbody>
 	</table>
+	<button class="btn btn-primary" ng-click="onAddSeller()">
+		<span translate="sellers.Add" />
+	</button>
 </div>

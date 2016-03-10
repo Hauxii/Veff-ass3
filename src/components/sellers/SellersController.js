@@ -1,7 +1,7 @@
 "use strict";
 
 angular.module("project3App").controller("SellersController",
-function SellersController($scope, AppResource, centrisNotify, SellerDlg, $location) {
+function SellersController($scope, AppResource, centrisNotify, SellerDlg, $location, $translate) {
 	// TODO: load data from AppResource! Also, add other methods, such as to
 	// add/update sellers etc.
 	$scope.isLoading = true;
