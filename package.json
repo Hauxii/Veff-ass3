@@ -55,5 +55,8 @@
     "run-sequence": "^1.1.5",
     "vinyl-source-stream": "^0.1.1",
     "yargs": "^1.3.3"
+  },
+  "dependencies": {
+    "angular-translate-loader-static-files": "^2.10.0"
   }
 }

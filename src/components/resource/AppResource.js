@@ -106,14 +106,18 @@ function AppResource() {
 		// defined above. A proper implementation will talk to
 		// an API to load/save data.
 		getSellers: function getSellers() {
+			//return $http.get("http://localhost:7000/api/sellers");
 			return mockHttpPromise(mockResource.successLoadSellers, mockSellers);
 		},
 
 		addSeller: function addSeller(seller) {
+			//return $http.post("http://localhost:7000/api/sellers", seller);
+			
 			if (mockResource.successAddSeller) {
 				mockSellers.push(seller);
 			}
 			return mockHttpPromise(mockResource.successAddSeller, seller);
+			
 		},
 
 		updateSeller: function(id, seller) {

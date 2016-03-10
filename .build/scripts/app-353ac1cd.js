@@ -1,16 +1,27 @@
 "use strict";
 
-angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices"])
-.config(function ($routeProvider) {
+angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices", "pascalprecht.translate"])
+.config(function ($routeProvider, $translateProvider) {
 	$routeProvider.when("/", {
 		controller: "SellersController",
 		templateUrl: "components/sellers/index.html"
 	});
+
+	//$translateProvider.use("is");
 });
 
 "use strict";
 
 angular.module("sharedServices", ["toastr"]);
+"use strict";
+
+angular.module("project3App").directive("loadingMessage", 
+function loadingMessage() {
+	return {
+		restrict: "E",
+		templateUrl: "src/components/loading-message/loading.html"
+	};
+});
 "use strict";
 
 /**
@@ -119,14 +130,18 @@ function AppResource() {
 		// defined above. A proper implementation will talk to
 		// an API to load/save data.
 		getSellers: function getSellers() {
+			//return $http.get("http://localhost:7000/api/sellers");
 			return mockHttpPromise(mockResource.successLoadSellers, mockSellers);
 		},
 
 		addSeller: function addSeller(seller) {
+			//return $http.post("http://localhost:7000/api/sellers", seller);
+			
 			if (mockResource.successAddSeller) {
 				mockSellers.push(seller);
 			}
 			return mockHttpPromise(mockResource.successAddSeller, seller);
+			
 		},
 
 		updateSeller: function(id, seller) {
@@ -192,13 +207,74 @@ function AppResource() {
 });
 "use strict";
 
+angular.module("project3App").factory("SellerDlg",
+function($uibModal) {
+	return {
+		show: function() {
+			var modalInstance = $uibModal.open({
+				templateUrl: "components/seller-dlg/seller-dlg.html",
+				controller: "SellerDlgController"
+			});
+
+			return modalInstance.result;
+		}
+	};
+});
+"use strict";
+
+angular.module("project3App").controller("SellerDlgController", 
+function SellerDlgController($scope) {
+	
+	$scope.seller = {
+		name: "",
+		category: "",
+		imagePath: ""
+	};
+
+	$scope.onOk = function onOk() {
+		$scope.$close();
+	};
+	
+	$scope.onCancel = function onCancel() {
+		$scope.$dismiss();
+	};
+});
+"use strict";
+
 angular.module("project3App").controller("SellersController",
-function SellersController($scope, AppResource) {
+function SellersController($scope, AppResource, centrisNotify, SellerDlg) {
 	// TODO: load data from AppResource! Also, add other methods, such as to
 	// add/update sellers etc.
+	$scope.isLoading = true;
 	AppResource.getSellers().success(function(sellers){
 		$scope.sellers = sellers;
+		$scope.isLoading = false;
+	}).error(function(){
+		$scope.isLoading = false;
 	});
+
+	$scope.onAddSeller = function onAddSeller() {
+		SellerDlg.show().then(function(seller) {
+			AppResource.addSeller(seller).success(function(seller){
+				var newSeller = seller;
+				$scope.sellers.push(seller);
+				//TODO: bæta seljanda í listann
+			}).error(function(){
+				//TODO: implement error
+				centrisNotify.error("sellers.Messages.SaveFailed");
+			});
+		});
+
+		var seller = {
+			name: "",
+			category: "",
+			imagePath: ""
+		};
+
+		
+	};
+
+
 });
 "use strict";
 
