@@ -14,8 +14,8 @@
 			</tr>
 		</thead>
 		<tbody>
-			<tr ng-repeat="seller in sellers">
-				<td>{{seller.name}}</td>
+			<tr ng-repeat="seller in sellers track by $index">
+				<td><a ng-click="onSellerDetails(seller.id)" href="#/seller/{{seller.id}}" >{{seller.name}}</a></td>
 				<td>{{seller.category}}</td>
 			</tr>
 		</tbody>

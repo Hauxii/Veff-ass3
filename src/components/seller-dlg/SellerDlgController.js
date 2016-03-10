@@ -10,7 +10,7 @@ function SellerDlgController($scope) {
 	};
 
 	$scope.onOk = function onOk() {
-		$scope.$close();
+		$scope.$close($scope.seller);
 	};
 	
 	$scope.onCancel = function onCancel() {
