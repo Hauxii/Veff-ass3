@@ -2,7 +2,7 @@
 	"sellerdetails" : {
 		"Top10":                     "Topp 10",
 		"Products":                  "Allar vörur",
-		"Category"                   "Flokkur",
+		"Category":                   "Flokkur",
 		"Messages" : {
 			"LoadFailed":            "Ekki tókst að sækja lista af vörum",
 		}

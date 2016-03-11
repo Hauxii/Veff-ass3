@@ -1,4 +1,13 @@
 {
+	"products": {
+		"Product": "Vara",
+		"Price": "Verð",
+		"QuantityStock": "Vörur á lager",
+		"QuantitySold": "Vörur seldar",
+		"Messages": {
+			"LoadFailed": "Ekki tókst að sækja lista af vörum"
+		}
+	},
 	"sellers": {
 		"Title": "Seljendur",
 		"Name": "Nafn",

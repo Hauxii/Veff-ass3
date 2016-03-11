@@ -1,0 +1,15 @@
+{
+	"sellers" : {
+		"Title":                     "SMU",
+		"Name":                      "SMU",
+		"Category":                  "SMU",
+		"Add":                       "SMU",
+		"Ok":                        "SMU",
+		"Cancel":                    "SMU",
+		"Messages" : {
+			"LoadFailed":            "SMUUUUUUUUUUUUUU",
+			"SaveSucceeded":         "SMUUUUUUUUUUUUUU",
+			"SaveFailed":            "SMUUUUUUUUUUUUUU"
+		}
+	}
+}
