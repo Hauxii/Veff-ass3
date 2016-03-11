@@ -15,6 +15,7 @@
 		"Add":                       "SMU",
 		"Ok":                        "SMU",
 		"Cancel":                    "SMU",
+		"Edit":                      "SMU",
 		"Messages" : {
 			"LoadFailed":            "SMUUUUUUUUUUUUUU",
 			"SaveSucceeded":         "SMUUUUUUUUUUUUUU",

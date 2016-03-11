@@ -6,6 +6,7 @@
 		"Add":                       "Bæta við",
 		"Ok":                        "Bæta við",
 		"Cancel":                    "Hætta við",
+		"Edit":                      "Breyta",
 		"Messages" : {
 			"LoadFailed":            "Ekki tókst að sækja lista yfir seljendur",
 			"SaveSucceeded":         "Nýjum seljanda hefur verið bætt við",
