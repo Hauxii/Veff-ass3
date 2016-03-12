@@ -10,7 +10,9 @@
 		"Messages" : {
 			"LoadFailed":            "SMUUUUUUUUUUUUUU",
 			"SaveSucceeded":         "SMUUUUUUUUUUUUUU",
-			"SaveFailed":            "SMUUUUUUUUUUUUUU"
+			"SaveFailed":            "SMUUUUUUUUUUUUUU",
+			"EditSucceeded":         "SMUUUUUUUUUUUUUU",
+			"EditFailed":            "SMUUUUUUUUUUUUUU"
 		}
 	}
 }

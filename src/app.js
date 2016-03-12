@@ -12,9 +12,10 @@ angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices", "pas
 
 	$translateProvider.fallbackLanguage('en');
 
-	$translateProvider.registerAvailableLanguageKeys(['en', 'is'],{
+	$translateProvider.registerAvailableLanguageKeys(['en', 'is', 'smu'],{
 		'en_*':'en',
-		'is_*':'is'
+		'is_*':'is',
+		'smu_*':'smu'
 	});
 
 	$translateProvider.useStaticFilesLoader({

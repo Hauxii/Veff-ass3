@@ -4,7 +4,7 @@
 		"Products":                  "Products",
 		"Category":                   "Category",
 		"Messages" : {
-			"LoadFailed":            "Failed to load the list of products",
+			"LoadFailed":            "Failed to load the list of products"
 		}
 	}
 }

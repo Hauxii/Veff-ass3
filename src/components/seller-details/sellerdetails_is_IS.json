@@ -4,7 +4,7 @@
 		"Products":                  "Allar vörur",
 		"Category":                   "Flokkur",
 		"Messages" : {
-			"LoadFailed":            "Ekki tókst að sækja lista af vörum",
+			"LoadFailed":            "Ekki tókst að sækja lista af vörum"
 		}
 	}
 }

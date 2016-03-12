@@ -1,0 +1,11 @@
+{
+	"products" : {
+		"Product":                "SMU",
+		"Price":                  "SMU",
+		"QuantityStock":          "SMU",
+		"QuantitySold":           "SMU",
+		"Messages" : {
+			"LoadFailed":            "SMUUUUUUUUUUUUUU"
+		}
+	}
+}

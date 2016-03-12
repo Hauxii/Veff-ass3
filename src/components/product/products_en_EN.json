@@ -5,7 +5,7 @@
 		"QuantityStock":          "Quantity in stock",
 		"QuantitySold":           "Quantity sold",
 		"Messages" : {
-			"LoadFailed":            "Failed to load the list of products",
+			"LoadFailed":            "Failed to load the list of products"
 		}
 	}
 }

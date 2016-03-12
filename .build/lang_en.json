@@ -8,6 +8,14 @@
 			"LoadFailed": "Failed to load the list of products"
 		}
 	},
+	"sellerdetails": {
+		"Top10": "Top 10",
+		"Products": "Products",
+		"Category": "Category",
+		"Messages": {
+			"LoadFailed": "Failed to load the list of products"
+		}
+	},
 	"sellers": {
 		"Title": "Sellers List",
 		"Name": "Name",
@@ -19,7 +27,9 @@
 		"Messages": {
 			"LoadFailed": "Failed to load the list of sellers",
 			"SaveSucceeded": "The seller has been added successfully",
-			"SaveFailed": "Unfortunately we could not add a new seller"
+			"SaveFailed": "Unfortunately we could not add a new seller",
+			"EditSucceeded": "The seller has been edited successfully",
+			"EditFailed": "Unfortunately we could not edit this seller"
 		}
 	}
 }

@@ -28,6 +28,17 @@ function SellersController($scope, AppResource, centrisNotify, SellerDlg, $locat
 		
 	};
 
+	$scope.onEditSeller = function onEditSeller(editSeller) {
+		SellerDlg.show(editSeller).then(function(editSeller) {
+			AppResource.updateSeller(editSeller.id, seller).success(function(seller){
+				//$scope.seller = seller;
+				centrisNotify.success("sellers.Messages.EditSucceeded");
+			}).error(function(){
+				centrisNotify.error("sellers.Messages.EditFailed");
+			});
+		});
+	};
+
 	$scope.onSellerDetails = function onSellerDetails(sellerID) {
 		$location.path("/seller/" + sellerID);
 	};
