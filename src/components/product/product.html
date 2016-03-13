@@ -1,12 +1,13 @@
 <!--  TODO: setja upp (mynd á myschool), bootstrap og css -->
 <div class="well col-md-4">
-	<img src="{{p.imagePath}}"/>
-	<p translate="products.Product"></p>
-	<p>{{p.name}}</p>
-	<p translate="products.Price"></p>
-	<p>{{p.price}}</p>
-	<p translate="products.QuantityStock"></p>
-	<p>{{p.quantityInStock}}</p>
-	<p translate="products.QuantitySold"></p>
-	<p>{{p.quantitySold}}</p>
+	<img src="{{p.imagePath}}" height="200" width="200"class="img-responsive" />
+	<div >
+		<p><b translate="products.Product"></b>: {{p.name}}</p>
+		<p class="pull-right"><b translate="products.Price"></b>: {{p.price}} </p>
+	</div>
+	<div>
+		<p><b translate="products.QuantityStock"></b>: {{p.quantityInStock}}</p>
+		<p class="pull-right"><b translate="products.QuantitySold"></b>: {{p.quantitySold}}</p>
+	</div>
+	
 </div>	

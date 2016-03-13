@@ -29,7 +29,7 @@ function SellerDlgController($scope, modalParam, centrisNotify, $translate) {
 	$scope.onOk = function onOk() {
 		//validation
 		var error = false;
-		else if($scope.product.name.length < 1){
+		if($scope.product.name.length < 1){
 			centrisNotify.error("sellers.Messages.NameMissing");
 			error = true;
 		}
@@ -46,8 +46,8 @@ function SellerDlgController($scope, modalParam, centrisNotify, $translate) {
 			if($scope.product.imagePath < 1){
 				$scope.product.imagePath = "http://image005.flaticon.com/1/png/128/20/20773.png";
 			}
-			$scope.product.quantitySold: 0,
-			
+			$scope.product.quantitySold = 0;
+
 			$scope.$close($scope.product);
 		}
 	};

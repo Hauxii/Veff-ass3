@@ -16,7 +16,7 @@ function SellerDetailsController($scope, AppResource, $routeParams, centrisNotif
 		centrisNotify.error("sellerDetails.Messages.ProductLoadFailed");
 	});
 
-	$scope.onAddProduct = function onAddProduct() {
+	/*$scope.onAddProduct = function onAddProduct() {
 		ProductDlg.show().then(function(product) {
 			AppResource.createProduct(parseInt($scope.sellerID), product.name, parseInt(product.price), parseInt(product.quantitySold), parseInt(product.quantityInStock), product.imagePath).success(function(product){
 				centrisNotify.success("products.Messages.SaveSucceeded");
@@ -24,7 +24,7 @@ function SellerDetailsController($scope, AppResource, $routeParams, centrisNotif
 				centrisNotify.error("products.Messages.SaveFailed");
 			});
 		});
-	};
+	};*/
 
 
 });
