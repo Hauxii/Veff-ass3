@@ -29,8 +29,9 @@ function SellersController($scope, AppResource, centrisNotify, SellerDlg, $locat
 	};
 
 	$scope.onEditSeller = function onEditSeller(editSeller) {
+		var editID = editSeller.id;
 		SellerDlg.show(editSeller).then(function(editSeller) {
-			AppResource.updateSeller(editSeller.id, seller).success(function(seller){
+			AppResource.updateSeller(editID, editSeller).success(function(seller){
 				//$scope.seller = seller;
 				centrisNotify.success("sellers.Messages.EditSucceeded");
 			}).error(function(){

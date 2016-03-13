@@ -5,7 +5,7 @@ function SellerDlgController($scope, modalParam) {
 	
 	var sellerObj = modalParam.seller;
 
-	console.log(sellerObj);
+	//console.log(sellerObj);
 
 	if(sellerObj !== undefined){
 		$scope.seller = {
