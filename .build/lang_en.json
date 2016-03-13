@@ -13,7 +13,8 @@
 		"Products": "Products",
 		"Category": "Category",
 		"Messages": {
-			"LoadFailed": "Failed to load the list of products"
+			"ProductLoadFailed": "Failed to load the list of products",
+			"UserLoadFailed": "Failed to load user details"
 		}
 	},
 	"sellers": {

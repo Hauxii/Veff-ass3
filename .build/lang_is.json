@@ -13,7 +13,8 @@
 		"Products": "Allar vörur",
 		"Category": "Flokkur",
 		"Messages": {
-			"LoadFailed": "Ekki tókst að sækja lista af vörum"
+			"ProductLoadFailed": "Ekki tókst að sækja lista af vörum",
+			"UserLoadFailed": "Ekki tókst að sækja upplýsingar um notanda"
 		}
 	},
 	"sellers": {
