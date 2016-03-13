@@ -12,7 +12,10 @@
 			"SaveSucceeded":         "Nýjum seljanda hefur verið bætt við",
 			"SaveFailed":            "Því miður tókst ekki að bæta við nýjum seljanda",
 			"EditSucceeded":         "Seljanda hefur verið breytt",
-			"EditFailed":            "Því miður tókst ekki að breyta seljandanum"
+			"EditFailed":            "Því miður tókst ekki að breyta seljandanum",
+			"NameMissing":           "Nafn verður að vera útfyllt",
+			"CategoryMissing":       "Flokkur verður að vera útfylltur",
+			"ValidationError":       "Vinsamlegast fyllið í reitina"
 		}
 	}
 }

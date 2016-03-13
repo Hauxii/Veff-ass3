@@ -14,6 +14,8 @@ function SellersController($scope, AppResource, centrisNotify, SellerDlg, $locat
 
 	$scope.onAddSeller = function onAddSeller() {
 		SellerDlg.show().then(function(seller) {
+			//console.log(seller);
+
 			AppResource.addSeller(seller).success(function(seller){
 				centrisNotify.success("sellers.Messages.SaveSucceeded");
 				//var newSeller = seller;

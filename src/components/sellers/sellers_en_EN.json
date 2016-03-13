@@ -12,7 +12,10 @@
 			"SaveSucceeded":         "The seller has been added successfully",
 			"SaveFailed":            "Unfortunately we could not add a new seller",
 			"EditSucceeded":         "The seller has been edited successfully",
-			"EditFailed":            "Unfortunately we could not edit this seller"
+			"EditFailed":            "Unfortunately we could not edit this seller",
+			"NameMissing":           "Name must be defined",
+			"CategoryMissing":       "Category must be defined",
+			"ValidationError":       "Please fill out the form"
 		}
 	}
 }

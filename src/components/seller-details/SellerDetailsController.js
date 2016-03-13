@@ -1,20 +1,19 @@
 "use strict";
 
 angular.module("project3App").controller("SellerDetailsController",
-function SellerDetailsController($scope, AppResource, $routeParams, $translate){
+function SellerDetailsController($scope, AppResource, $routeParams, centrisNotify, $translate){
 	$scope.sellerID = parseInt($routeParams.sellerID);
 	
 	AppResource.getSellerDetails($scope.sellerID).success(function(seller){
 		$scope.seller = seller;
 	}).error(function(){
-		$scope.title = "ERROR 404 - You a tard";
+		centrisNotify.error("sellerdetails.Messages.UserLoadFailed");
 	});
 
 	AppResource.getSellerProducts($scope.sellerID).success(function(products){
 		$scope.products = products;
 	}).error(function(){
-		$scope.title = "ERROR 404 - Y U NO SELL PRODUCTS";
+		centrisNotify.error("sellerDetails.Messages.ProductLoadFailed");
 	});
-	$scope.title = "asshole";
 	//console.log($scope.seller);
 });

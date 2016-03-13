@@ -12,7 +12,10 @@
 			"SaveSucceeded":         "SMUUUUUUUUUUUUUU",
 			"SaveFailed":            "SMUUUUUUUUUUUUUU",
 			"EditSucceeded":         "SMUUUUUUUUUUUUUU",
-			"EditFailed":            "SMUUUUUUUUUUUUUU"
+			"EditFailed":            "SMUUUUUUUUUUUUUU",
+			"NameMissing":           "SMUUUUUUUUUUUUUU",
+			"CategoryMissing":       "SMUUUUUUUUUUUUUU",
+			"ValidationError":       "SMUUUUUUUUUUUUUU"
 		}
 	}
 }

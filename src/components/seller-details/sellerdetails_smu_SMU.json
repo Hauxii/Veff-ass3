@@ -4,7 +4,8 @@
 		"Products":                  "SMU",
 		"Category":                   "SMU",
 		"Messages" : {
-			"LoadFailed":            "SMUUUUUUUUUUUUUU"
+			"ProductLoadFailed":            "SMUUUUUUUUUUUUUU",
+			"UserLoadFailed":            "SMUUUUUUUUUUUUUU"
 		}
 	}
 }
