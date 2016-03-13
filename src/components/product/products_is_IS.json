@@ -4,8 +4,13 @@
 		"Price":                  "Verð",
 		"QuantityStock":          "Vörur á lager",
 		"QuantitySold":           "Vörur seldar",
+		"Add":                    "Ný vara",
 		"Messages" : {
-			"LoadFailed":         "Ekki tókst að sækja lista af vörum"
+			"LoadFailed":         "Ekki tókst að sækja lista af vörum",
+			"NameMissing":              "Nafn þarf að vera útfyllt",
+			"PriceMissing":             "Verð þarf að vera útfyllt",
+			"QuantityInStockMissing":   "Vörur á lager þarf að vera útfyllt",
+			"SaveSucceeded":            "Vöru hefur verið bætt við"			
 		}
 	}
 }

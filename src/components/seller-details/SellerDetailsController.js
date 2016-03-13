@@ -1,7 +1,7 @@
 "use strict";
 
 angular.module("project3App").controller("SellerDetailsController",
-function SellerDetailsController($scope, AppResource, $routeParams, centrisNotify, $translate){
+function SellerDetailsController($scope, AppResource, $routeParams, centrisNotify, $translate, ProductDlg){
 	$scope.sellerID = parseInt($routeParams.sellerID);
 	
 	AppResource.getSellerDetails($scope.sellerID).success(function(seller){
@@ -16,15 +16,14 @@ function SellerDetailsController($scope, AppResource, $routeParams, centrisNotif
 		centrisNotify.error("sellerDetails.Messages.ProductLoadFailed");
 	});
 
-	/*$scope.onAddProduct = function onAddProduct() {
+	$scope.onAddProduct = function onAddProduct() {
 		ProductDlg.show().then(function(product) {
-			AppResource.createProduct(parseInt($scope.sellerID), product.name, parseInt(product.price), parseInt(product.quantitySold), parseInt(product.quantityInStock), product.imagePath).success(function(product){
+			AppResource.addSellerProduct(parseInt($scope.sellerID), product).success(function(product){
 				centrisNotify.success("products.Messages.SaveSucceeded");
 			}).error(function(){
 				centrisNotify.error("products.Messages.SaveFailed");
 			});
 		});
-	};*/
-
+	};
 
 });

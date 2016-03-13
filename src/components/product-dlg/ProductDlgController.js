@@ -1,44 +1,31 @@
 "use strict";
 
-angular.module("project3App").controller("SellerDlgController", 
-function SellerDlgController($scope, modalParam, centrisNotify, $translate) {
-	
-	var productObj = modalParam.product;
-	//console.log(sellerObj);
+angular.module("project3App").controller("ProductDlgController", 
+function SellerDlgController($scope, centrisNotify, $translate) {
 
-	if(productObj !== undefined){
-		$scope.product = {
-			name: productObj.name,
-			price: productObj.price,
-			quantityInStock: productObj.quantityInStock,
-			imagePath: productObj.imagePath
-		};
-	} 
-	else{
-		$scope.product = {
-			name: "",
-			price: "",
-			quantityInStock: "",
-			imagePath: ""
-		};
-	}
-
+	$scope.product = {
+		name: "",
+		price: "",
+		quantityInStock: "",
+		imagePath: ""
+	};
 
 
 	
 	$scope.onOk = function onOk() {
 		//validation
 		var error = false;
+		
+		if($scope.product.quantityInStock.length < 1){
+			centrisNotify.error("products.Messages.QuantityInStockMissing");
+			error = true;
+		}
+		if($scope.product.price < 1){
+			centrisNotify.error("products.Messages.PriceMissing");
+			error = true;
+		}
 		if($scope.product.name.length < 1){
-			centrisNotify.error("sellers.Messages.NameMissing");
-			error = true;
-		}
-		else if($scope.product.price < 1){
-			centrisNotify.error("sellers.Messages.CategoryMissing");
-			error = true;
-		}
-		else if($scope.product.quantityInStock.length < 1){
-			centrisNotify.error("sellers.Messages.CategoryMissing");
+			centrisNotify.error("products.Messages.NameMissing");
 			error = true;
 		}
 		
