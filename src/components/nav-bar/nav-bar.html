@@ -1,8 +1,12 @@
 <!--  TODO: bootstrap og css -->
-<div ng-controller="NavBarController" class="collapse navbar-collapse">
-	<ul>
-		<li><a href="" ng-click="translate('is')">Íslenska</a></li>
-		<li><a href="" ng-click="translate('en')">English</a></li>
-		<li><a href="" ng-click="translate('smu')">Dabs</a></li>
-	</ul>
-</div>
+<nav ng-controller="NavBarController" class="navbar navbar-default">
+	<div class="pull-right">
+		<a href="" ng-click="translate('smu')"><img src="https://lh3.googleusercontent.com/--_WRZUEdZSw/Tg2ww_H8R9I/AAAAAAAAAL4/pvK4AEk90_8/w640-h400-p-k/photo.jpg" class="img-responsive pull-right" height="35" width="35" alt="Dabs"/></a>
+
+		<a href="" ng-click="translate('en')"><img src="http://resources.woodlands-junior.kent.sch.uk/customs/images/uk.jpg" class="img-responsive pull-right" height="43" width="43" alt="English"/></a>
+
+		<a href="" ng-click="translate('is')"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Light_Blue_Flag_of_Iceland.svg/2000px-Light_Blue_Flag_of_Iceland.svg.png" class="img-responsive pull-right" height="30" width="30" alt="Íslenska"/></a>
+			
+		
+	</div>
+</nav>

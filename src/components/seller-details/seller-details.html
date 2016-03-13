@@ -1,8 +1,10 @@
 <!--  TODO: css og setja fallega upp -->
 <div ng-include="'src/components/nav-bar/nav-bar.html'"></div>
 <img ng-src="{{seller.imagePath}}"/>
+<p class="well">
 {{seller.name}}
 {{seller.category}}
+</p>
 
 <!--  TODO: implement tabs  -->
 <product ng-repeat="p in products"></product>

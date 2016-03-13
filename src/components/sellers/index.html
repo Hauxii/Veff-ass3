@@ -1,26 +1,30 @@
-<!--  TODO: bootstrapa, css og gera fallegt -->
-<div ng-include="'src/components/nav-bar/nav-bar.html'"></div>
-<div ng-show="isLoading">
-	<loading-message></loading-message>
-</div>
-<toaster-container></toaster-container>
-<div ng-hide="isLoading">
-	<table>
-		<thead>
-			<tr>
-				<th translate="sellers.Name"></th>
-				<th translate="sellers.Category"></th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr ng-repeat="seller in sellers track by $index">
-				<td><a ng-click="onSellerDetails(seller.id)" href="#/seller/{{seller.id}}" >{{seller.name}}</a></td>
-				<td>{{seller.category}}</td>
-				<td><button ng-click="onEditSeller(seller)" translate="sellers.Edit"></button></td>
-			</tr>
-		</tbody>
-	</table>
-	<button class="btn btn-primary" ng-click="onAddSeller()">
-		<span translate="sellers.Add" />
-	</button>
+<div class="container">
+	<!--  TODO: bootstrapa, css og gera fallegt -->
+	<div ng-include="'src/components/nav-bar/nav-bar.html'"></div>
+	<div ng-show="isLoading">
+		<loading-message></loading-message>
+	</div>
+	<toaster-container></toaster-container>
+	<div ng-hide="isLoading" class="well">
+		<button class="btn btn-primary pull-right" ng-click="onAddSeller()">
+			<span translate="sellers.Add" />
+		</button>
+		<h2 translate="">Söluaðilar</h2>
+		<table class="table table-hover">
+			<thead>
+				<tr>
+					<th translate="sellers.Name"></th>
+					<th translate="sellers.Category"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="seller in sellers track by $index">
+					<td><a ng-click="onSellerDetails(seller.id)" href="#/seller/{{seller.id}}" >{{seller.name}}</a></td>
+					<td>{{seller.category}}</td>
+					<td><button ng-click="onEditSeller(seller)" translate="sellers.Edit" class="btn btn-primary"></button></td>
+				</tr>
+			</tbody>
+		</table>
+		
+	</div>
 </div>
