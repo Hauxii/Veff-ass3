@@ -1,10 +1,14 @@
 <!--  TODO: css og setja fallega upp -->
 <div ng-include="'src/components/nav-bar/nav-bar.html'"></div>
-<img ng-src="{{seller.imagePath}}"/>
-<p class="well">
-{{seller.name}}
-{{seller.category}}
-</p>
+<div class="container well">
+	
+	<img ng-src="{{seller.imagePath}}" class="pull-left img-responsive" height="500" width="500" />
+	<p class="pull-right">
+		<p class="lead">{{seller.name}}</p>
+		<p><em>{{seller.category}}</em></p>
+	</p>
+</div>
+
 
 <toaster-container></toaster-container>
 
