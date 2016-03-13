@@ -15,7 +15,6 @@ function SellerDetailsController($scope, AppResource, $routeParams, $translate){
 	}).error(function(){
 		$scope.title = "ERROR 404 - Y U NO SELL PRODUCTS";
 	});
-	console.log($scope.products);
 	$scope.title = "asshole";
 	//console.log($scope.seller);
 });
