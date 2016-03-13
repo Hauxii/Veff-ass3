@@ -14,27 +14,18 @@ function SellersController($scope, AppResource, centrisNotify, SellerDlg, $locat
 
 	$scope.onAddSeller = function onAddSeller() {
 		SellerDlg.show().then(function(seller) {
-			//console.log(seller);
-
 			AppResource.addSeller(seller).success(function(seller){
 				centrisNotify.success("sellers.Messages.SaveSucceeded");
-				//var newSeller = seller;
-				//$scope.sellers.push(seller);
-				//console.log($scope.sellers);
-				//TODO: bæta seljanda í listann
 			}).error(function(){
-				//TODO: implement error
 				centrisNotify.error("sellers.Messages.SaveFailed");
 			});
 		});
-		
 	};
 
 	$scope.onEditSeller = function onEditSeller(editSeller) {
 		var editID = editSeller.id;
 		SellerDlg.show(editSeller).then(function(editSeller) {
 			AppResource.updateSeller(editID, editSeller).success(function(seller){
-				//$scope.seller = seller;
 				centrisNotify.success("sellers.Messages.EditSucceeded");
 			}).error(function(){
 				centrisNotify.error("sellers.Messages.EditFailed");

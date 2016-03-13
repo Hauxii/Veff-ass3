@@ -20,11 +20,11 @@ function AppResource() {
 	}
 
 	// Another helper function.
-	function createProduct(sellerid, id, productName, price, quantitySold, quantityInStock, path) {
+	function createProduct(sellerid, productName, price, quantitySold, quantityInStock, path) {
 		return {
 			id: sellerid,
 			product: {
-				id: id,
+				id: nextProduct++,
 				name: productName,
 				price: price,
 				quantitySold: quantitySold,
@@ -68,6 +68,7 @@ function AppResource() {
 		createProduct(3, 21, "Kókoskúlur",        499, 100, 5000, "https://upload.wikimedia.org/wikipedia/commons/2/2c/Chokladbollar.jpg"),
 		createProduct(3, 22, "Brjóstsykur",       499, 200, 4900, ""),
 	];
+	var nextProduct = 23;
 	// Note: sellers 2 and 4 don't have any products - yet!
 
 	// A helper object which emulates the return value

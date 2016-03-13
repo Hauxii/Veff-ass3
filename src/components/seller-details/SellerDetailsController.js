@@ -15,5 +15,16 @@ function SellerDetailsController($scope, AppResource, $routeParams, centrisNotif
 	}).error(function(){
 		centrisNotify.error("sellerDetails.Messages.ProductLoadFailed");
 	});
-	//console.log($scope.seller);
+
+	$scope.onAddProduct = function onAddProduct() {
+		ProductDlg.show().then(function(product) {
+			AppResource.createProduct(parseInt($scope.sellerID), product.name, parseInt(product.price), parseInt(product.quantitySold), parseInt(product.quantityInStock), product.imagePath).success(function(product){
+				centrisNotify.success("products.Messages.SaveSucceeded");
+			}).error(function(){
+				centrisNotify.error("products.Messages.SaveFailed");
+			});
+		});
+	};
+
+
 });

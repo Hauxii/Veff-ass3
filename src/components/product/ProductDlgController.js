@@ -39,10 +39,10 @@ function SellerDlgController($scope, modalParam, centrisNotify, $translate) {
 			centrisNotify.error("sellers.Messages.CategoryMissing");
 			error = true;
 		}
+		if($scope.seller.imagePath < 1){
+			$scope.seller.imagePath = "http://vignette3.wikia.nocookie.net/the-enigma-corporation/images/0/01/Users-User-icon.png/revision/latest?cb=20140213102228";
+		}
 		if(!error){
-			if($scope.seller.imagePath < 1){
-				$scope.seller.imagePath = "http://vignette3.wikia.nocookie.net/the-enigma-corporation/images/0/01/Users-User-icon.png/revision/latest?cb=20140213102228";
-			}
 			$scope.$close($scope.seller);
 		}
 	};
