@@ -7,6 +7,7 @@
 		"Ok":                        "OK",
 		"Cancel":                    "Cancel",
 		"Edit":                      "Edit",
+		"Sellers":                   "Sellers",
 		"Messages" : {
 			"LoadFailed":            "Failed to load the list of sellers",
 			"SaveSucceeded":         "The seller has been added successfully",
