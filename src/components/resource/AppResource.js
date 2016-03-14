@@ -162,6 +162,8 @@ function AppResource() {
 		},
 
 		addSellerProduct: function addSellerProduct(id, product) {
+			product.id = nextProduct++;
+			console.log(product);
 			var success = false;
 			if (mockResource.successAddSellerProduct) {
 				var seller = _.find(mockSellers, function(o){ return o.id === id;});
@@ -180,21 +182,16 @@ function AppResource() {
 		updateProduct: function(id, p) {
 			if (mockResource.successUpdateSeller) {
 				var current = _.find(mockProducts, function(o){ return o.product.id === id;});
+				//console.log(current.product);
 				if (current !== null) {
-					//console.log("appr " + current.product.name);
-					//console.log("appr " + p.name);
 					current.product.name             = p.name;
 					current.product.price            = p.price;
 					current.product.quantityInStock  = p.quantityInStock;
 					current.product.imagePath        = p.imagePath;
 				}
-				//console.log("appr " + current.product.name);
 			}
 			return mockHttpPromise(mockResource.successUpdateSeller, p);
 		}
-
-		// TODO: the updateProduct() function is left as an exercise to
-		// the reader...
 	};
 
 	return mockResource;
