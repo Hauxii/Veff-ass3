@@ -163,7 +163,6 @@ function AppResource() {
 
 		addSellerProduct: function addSellerProduct(id, product) {
 			product.id = nextProduct++;
-			console.log(product);
 			var success = false;
 			if (mockResource.successAddSellerProduct) {
 				var seller = _.find(mockSellers, function(o){ return o.id === id;});
@@ -182,7 +181,6 @@ function AppResource() {
 		updateProduct: function(id, p) {
 			if (mockResource.successUpdateSeller) {
 				var current = _.find(mockProducts, function(o){ return o.product.id === id;});
-				//console.log(current.product);
 				if (current !== null) {
 					current.product.name             = p.name;
 					current.product.price            = p.price;
