@@ -1,11 +1,32 @@
 <!--  TODO: bootstrapa modal  -->
-<input type="text" ng-model="product.name" />
-<input type="text" ng-model="product.price" />
-<input type="text" ng-model="product.quantityInStock" />
-<input type="text" ng-model="product.imagePath" />
-<button class="btn btn-primary" ng-click="onOk()">
-	<span translate="sellers.Ok" />
-</button>
-<button class="btn btn-primary" ng-click="onCancel()">
-	<span translate="sellers.Cancel" />
-</button>
+
+<div>
+	<div>
+		<div class="col-md-6"> 
+			<p>Image path:</p>
+			<input type="text" ng-model="product.imagePath" />
+		</div>
+		<div class="col-md-6">
+			<p>Price: </p>
+			<input type="text" ng-model="product.price" />
+		</div>
+		<div class="col-md-6">
+			<p>Quantity in stock:</p>
+			<input type="text" ng-model="product.quantityInStock" />
+		</div>
+		<div class="col-md-6">
+			<p>Product name:</p>
+			<input type="text" ng-model="product.name" />
+		</div>
+	</div>
+
+	<button class="btn btn-primary" ng-click="onOk()">
+		<span translate="sellers.Ok" />
+	</button>
+	<button class="btn btn-primary" ng-click="onCancel()">
+		<span translate="sellers.Cancel" />
+	</button>
+
+</div>
+
+
