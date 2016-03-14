@@ -20,6 +20,11 @@ function SellerDetailsController($scope, AppResource, $routeParams, centrisNotif
 		ProductDlg.show().then(function(product) {
 			AppResource.addSellerProduct(parseInt($scope.sellerID), product).success(function(product){
 				centrisNotify.success("products.Messages.SaveSucceeded");
+				AppResource.getSellerProducts($scope.sellerID).success(function(products){
+					$scope.products = products;
+				}).error(function(){
+					centrisNotify.error("sellerDetails.Messages.ProductLoadFailed");
+				});
 			}).error(function(){
 				centrisNotify.error("products.Messages.SaveFailed");
 			});
