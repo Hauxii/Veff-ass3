@@ -20,11 +20,11 @@ function AppResource() {
 	}
 
 	// Another helper function.
-	function createProduct(sellerid, productName, price, quantitySold, quantityInStock, path) {
+	function createProduct(sellerid, id, productName, price, quantitySold, quantityInStock, path) {
 		return {
 			id: sellerid,
 			product: {
-				id: nextProduct++,
+				id: id,
 				name: productName,
 				price: price,
 				quantitySold: quantitySold,
