@@ -31,4 +31,14 @@ function SellerDetailsController($scope, AppResource, $routeParams, centrisNotif
 		});
 	};
 
+	$scope.onEditProduct = function onEditProduct(p) {
+		ProductDlg.show(p).then(function(product) {
+			AppResource.updateProduct(parseInt(p.id), product).success(function(p){
+				centrisNotify.success("products.Messages.EditSucceeded");
+			}).error(function(){
+				centrisNotify.error("products.Messages.SaveFailed");
+			});
+		});
+	};
+
 });

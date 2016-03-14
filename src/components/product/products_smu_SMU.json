@@ -10,7 +10,8 @@
 			"NameMissing":              "SMUUUUUUUUUUUUUU",
 			"PriceMissing":             "SMUUUUUUUUUUUUUU",
 			"QuantityInStockMissing":   "SMUUUUUUUUUUUUUU",
-			"SaveSucceeded":            "SMUUUUUUUUUUUUUU"
+			"SaveSucceeded":            "SMUUUUUUUUUUUUUU",
+			"EditSucceeded":            "SMUUUUUUUUUUUUUU"
 		}
 	}
 }

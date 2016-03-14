@@ -10,7 +10,8 @@
 			"NameMissing":              "Name must be definde",
 			"PriceMissing":             "Price must be defined",
 			"QuantityInStockMissing":   "Quantity in stock must be defined",
-			"SaveSucceeded":            "Product has been added successfully"
+			"SaveSucceeded":            "Product has been added successfully",
+			"EditSucceeded":            "Product has been updated successfully"
 		}
 	}
 }

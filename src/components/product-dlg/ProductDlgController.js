@@ -1,20 +1,34 @@
 "use strict";
 
 angular.module("project3App").controller("ProductDlgController", 
-function SellerDlgController($scope, centrisNotify, $translate) {
-
-	$scope.product = {
-		name: "",
-		price: "",
-		quantityInStock: "",
-		imagePath: ""
-	};
+function SellerDlgController($scope, centrisNotify, modalParam, $translate) {
 
 
+	var productObj = modalParam.product;
+	//
+	//console.log(productObj);
+
+	if(productObj !== undefined){
+		$scope.product = {
+			name: productObj.name,
+			price: productObj.price,
+			quantityInStock: productObj.quantityInStock,
+			imagePath: productObj.imagePath
+		};
+	} 
+	else{
+		$scope.product = {
+			name: "",
+			price: "",
+			quantityInStock: "",
+			imagePath: ""
+		};
+	}
 	
 	$scope.onOk = function onOk() {
 		//validation
 		var error = false;
+		//console.log($scope.product);
 		
 		if($scope.product.quantityInStock.length < 1){
 			centrisNotify.error("products.Messages.QuantityInStockMissing");
