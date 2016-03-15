@@ -19,9 +19,8 @@ function SellerDetailsController($scope, AppResource, $routeParams, centrisNotif
 	};
 
 	$scope.onTopProducts = function onTopProducts(){
+		//TODO: implement top products
 		$scope.products = {};
-		console.log($scope.products);
-
 	};
 
 	$scope.onAddProduct = function onAddProduct() {
