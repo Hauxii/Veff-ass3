@@ -1,7 +1,7 @@
 {
 	"sellerdetails" : {
 		"Top10":                     "Top 10",
-		"Products":                  "Products",
+		"Products":                  "All products",
 		"Category":                   "Category",
 		"Messages" : {
 			"ProductLoadFailed":            "Failed to load the list of products",

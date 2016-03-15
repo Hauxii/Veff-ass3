@@ -10,11 +10,19 @@ function SellerDetailsController($scope, AppResource, $routeParams, centrisNotif
 		centrisNotify.error("sellerdetails.Messages.UserLoadFailed");
 	});
 
-	AppResource.getSellerProducts($scope.sellerID).success(function(products){
-		$scope.products = products;
-	}).error(function(){
-		centrisNotify.error("sellerDetails.Messages.ProductLoadFailed");
-	});
+	$scope.onAllProducts = function onAllProducts(){
+		AppResource.getSellerProducts($scope.sellerID).success(function(products){
+			$scope.products = products;
+		}).error(function(){
+			centrisNotify.error("sellerDetails.Messages.ProductLoadFailed");
+		});
+	};
+
+	$scope.onTopProducts = function onTopProducts(){
+		$scope.products = {};
+		console.log($scope.products);
+
+	};
 
 	$scope.onAddProduct = function onAddProduct() {
 		ProductDlg.show().then(function(product) {

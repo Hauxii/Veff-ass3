@@ -1,0 +1,17 @@
+{
+	"products" : {
+		"Product":                "Product",
+		"Price":                  "Price",
+		"QuantityStock":          "Quantity in stock",
+		"QuantitySold":           "Quantity sold",
+		"Add":                    "Add product",
+		"Messages" : {
+			"LoadFailed":               "Failed to load the list of products",
+			"NameMissing":              "Name must be definde",
+			"PriceMissing":             "Price must be defined",
+			"QuantityInStockMissing":   "Quantity in stock must be defined",
+			"SaveSucceeded":            "Product has been added successfully",
+			"EditSucceeded":            "Product has been updated successfully"
+		}
+	}
+}

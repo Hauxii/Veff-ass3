@@ -1,0 +1,17 @@
+{
+	"products" : {
+		"Product":                "SMU",
+		"Price":                  "SMU",
+		"QuantityStock":          "SMU",
+		"QuantitySold":           "SMU",
+		"Add":                    "SMU",
+		"Messages" : {
+			"LoadFailed":            "SMUUUUUUUUUUUUUU",
+			"NameMissing":              "SMUUUUUUUUUUUUUU",
+			"PriceMissing":             "SMUUUUUUUUUUUUUU",
+			"QuantityInStockMissing":   "SMUUUUUUUUUUUUUU",
+			"SaveSucceeded":            "SMUUUUUUUUUUUUUU",
+			"EditSucceeded":            "SMUUUUUUUUUUUUUU"
+		}
+	}
+}
